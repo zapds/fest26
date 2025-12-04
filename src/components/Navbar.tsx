@@ -58,7 +58,7 @@ export default function Navbar({ isMenuOpen, onMenuToggle }: NavbarProps) {
   }, [isMenuOpen]);
 
   return (
-    <>
+    <div className="flex flex-row">
       {/* IIITDM Logo */}
       <div className="fixed left-6 top-6">
         <Image
@@ -66,7 +66,7 @@ export default function Navbar({ isMenuOpen, onMenuToggle }: NavbarProps) {
           alt="IIITDM Logo"
           width={1024}
           height={512}
-          className="h-32 w-auto sm:h-20"
+          className="h-16 lg:h-20 w-auto"
         />
       </div>
 
@@ -89,6 +89,6 @@ export default function Navbar({ isMenuOpen, onMenuToggle }: NavbarProps) {
           className="block h-0.5 w-6 origin-center bg-white transition-colors"
         />
       </button>
-    </>
+    </div>
   );
 }

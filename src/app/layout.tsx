@@ -27,11 +27,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <SmoothScroll />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

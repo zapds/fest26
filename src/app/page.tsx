@@ -1,5 +1,7 @@
 import CountdownTimer from "@/components/CountdownTimer";
 import Footer from "@/components/Footer";
+import AboutSection from "@/components/AboutSection";
+import Sponsors from "@/components/Sponsors";
 
 export default function Home() {
   // Set target date to 3 days from now
@@ -8,8 +10,10 @@ export default function Home() {
 
   return (
     <>
-    <CountdownTimer targetDate={targetDate} />
-    <Footer />
+      <CountdownTimer targetDate={targetDate} />
+      <AboutSection />
+      <Sponsors />
+      <Footer />
     </>
   );
 }

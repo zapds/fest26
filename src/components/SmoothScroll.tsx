@@ -1,10 +1,14 @@
 'use client';
 
 import ReactLenis, { LenisRef } from "lenis/react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 import gsap from 'gsap'
 
-export default function SmoothScroll() {
+interface SmoothScrollProps {
+  children: ReactNode;
+}
+
+export default function SmoothScroll({ children }: SmoothScrollProps) {
     const lenisRef = useRef<LenisRef | null>(null);
 
     useEffect(() => {
@@ -19,8 +23,9 @@ export default function SmoothScroll() {
 
     
       return (
-        <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
+        <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
+          {children}
+        </ReactLenis>
     )
-
 }
 
